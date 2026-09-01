@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tanishq Gupta — Finance</title>
+<meta name="description" content="Tanishq Gupta — finance student, equity research, ACCA candidate. Gwalior, India." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --ink:        #171F1B;
+    --ink-soft:   #4B5048;
+    --paper:      #EEE7D6;
+    --paper-2:    #E3DAC0;
+    --paper-3:    #DCD1B3;
+    --forest:     #1F4436;
+    --forest-deep:#0F241C;
+    --brass:      #93701F;
+    --brass-soft: #B89A4B;
+    --rule:       #BEB18C;
+    --rule-soft:  #D2C7A5;
+    --red-ink:    #7A2E2A;
+
+    --serif: 'Spectral', Georgia, serif;
+    --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+
+    --maxw: 1120px;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:
+      repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 3px),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{ color:inherit; }
+
+  ::selection{ background:var(--forest); color:var(--paper); }
+
+  img, svg{ max-width:100%; display:block; }
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:0.02em;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- header ---------- */
+
+  header.site{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(238,231,214,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--rule);
+  }
+
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:68px;
+  }
+
+  .mark{
+    font-family:var(--mono);
+    font-weight:600;
+    font-size:15px;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    color:var(--ink);
+  }
+  .mark .dot{
+    width:9px; height:9px;
+    background:var(--forest);
+    border-radius:1px;
+    transform:rotate(45deg);
+    flex:none;
+  }
+
+  nav.links{
+    display:flex;
+    gap:28px;
+    font-family:var(--mono);
+    font-size:13.5px;
+  }
+  nav.links a{
+    text-decoration:none;
+    color:var(--ink-soft);
+    padding:4px 0;
+    border-bottom:1px solid transparent;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  nav.links a:hover{ color:var(--ink); border-color:var(--brass); }
+
+  .nav-toggle{
+    display:none;
+    background:none;
+    border:1px solid var(--rule);
+    border-radius:3px;
+    width:38px; height:34px;
+    cursor:pointer;
+    padding:0;
+  }
+  .nav-toggle span{
+    display:block;
+    width:16px; height:1.5px;
+    background:var(--ink);
+    margin:3.5px auto;
+  }
+
+  /* ---------- hero ---------- */
+
+  .hero{
+    padding:76px 0 88px;
+    border-bottom:1px solid var(--rule);
+  }
+
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:56px;
+    align-items:center;
+  }
+
+  .hero .kicker{
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--forest);
+    margin-bottom:18px;
+  }
+
+  h1.name{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(44px, 6.2vw, 74px);
+    line-height:1.02;
+    margin:0 0 20px;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+
+  .hero-lede{
+    font-size:19px;
+    line-height:1.6;
+    color:var(--ink-soft);
+    max-width:46ch;
+    margin:0 0 34px;
+  }
+  .hero-lede em{
+    font-style:italic;
+    color:var(--ink);
+  }
+
+  .cta-row{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+
+  .btn{
+    font-family:var(--mono);
+    font-size:13.5px;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:2px;
+    display:inline-block;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn.primary{
+    background:var(--forest);
+    color:var(--paper);
+  }
+  .btn.primary:hover{ background:var(--forest-deep); }
+  .btn.ghost{
+    border:1px solid var(--ink);
+    color:var(--ink);
+  }
+  .btn.ghost:hover{ background:var(--ink); color:var(--paper); }
+
+  /* chart card */
+  .chart-card{
+    background:var(--paper-2);
+    border:1px solid var(--rule);
+    padding:26px 24px 22px;
+    position:relative;
+  }
+  .chart-card .chart-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--ink-soft);
+    margin-bottom:14px;
+  }
+  .chart-card .chart-head .val{
+    color:var(--forest);
+    font-weight:600;
+  }
+  .chart-legend{
+    display:flex;
+    gap:18px;
+    margin-top:12px;
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--ink-soft);
+  }
+  .chart-legend span{ display:flex; align-items:center; gap:6px; }
+  .swatch{ width:14px; height:2px; display:inline-block; }
+  .swatch.p{ background:var(--forest); }
+  .swatch.b{ background:var(--brass-soft); border-top:2px dashed var(--brass-soft); height:0; }
+  .chart-note{
+    font-family:var(--mono);
+    font-size:10.5px;
+    color:var(--ink-soft);
+    margin-top:10px;
+    opacity:.8;
+  }
+
+  #path-portfolio{
+    stroke-dasharray:520;
+    stroke-dashoffset:520;
+    animation:draw 1.6s ease forwards .35s;
+  }
+  #path-benchmark{
+    stroke-dasharray:520;
+    stroke-dashoffset:520;
+    animation:draw 1.6s ease forwards .1s;
+  }
+  #callout{
+    opacity:0;
+    animation:fadein .6s ease forwards 1.6s;
+  }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+  @keyframes fadein{ to{ opacity:1; } }
+  @media (prefers-reduced-motion: reduce){
+    #path-portfolio, #path-benchmark{ animation:none; stroke-dashoffset:0; }
+    #callout{ animation:none; opacity:1; }
+  }
+
+  /* ---------- section shell ---------- */
+
+  section{
+    padding:84px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  section:last-of-type{ border-bottom:none; }
+
+  .section-head{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:18px;
+    align-items:baseline;
+    margin-bottom:44px;
+  }
+  .section-head .idx{
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--brass);
+  }
+  h2{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(28px, 3.4vw, 38px);
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .section-intro{
+    max-width:64ch;
+    color:var(--ink-soft);
+    font-size:17px;
+    margin:-24px 0 40px;
+  }
+
+  /* ---------- about ---------- */
+
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.3fr 0.7fr;
+    gap:60px;
+  }
+  .about-grid p{
+    font-size:18px;
+    line-height:1.75;
+    margin:0 0 20px;
+    max-width:58ch;
+  }
+  .pull{
+    font-style:italic;
+    font-size:21px;
+    color:var(--forest);
+    border-left:2px solid var(--forest);
+    padding-left:18px;
+    margin:32px 0;
+    max-width:52ch;
+  }
+
+  .fact-sheet{
+    font-family:var(--mono);
+    font-size:13px;
+    border-top:1px solid var(--rule);
+  }
+  .fact-sheet dl{ margin:0; }
+  .fact-row{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    padding:13px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .fact-row dt{ color:var(--ink-soft); }
+  .fact-row dd{ margin:0; text-align:right; color:var(--ink); }
+
+  /* ---------- record / metrics ---------- */
+
+  .metrics-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+  }
+  .metric{
+    background:var(--paper);
+    padding:26px 20px 24px;
+  }
+  .metric-val{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:38px;
+    color:var(--forest);
+    line-height:1;
+    margin-bottom:10px;
+  }
+  .metric-val .suf{ font-size:26px; }
+  .metric-label{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--ink-soft);
+    line-height:1.5;
+    max-width:22ch;
+  }
+
+  /* ---------- timeline ---------- */
+
+  .tline{
+    position:relative;
+    display:flex;
+    gap:0;
+    padding-top:6px;
+  }
+  .tline-rail{
+    position:absolute;
+    left:0; right:0; top:15px;
+    height:1px;
+    background:var(--rule);
+  }
+  .tline-item{
+    flex:1;
+    position:relative;
+    padding-right:18px;
+  }
+  .tline-dot{
+    width:9px; height:9px;
+    border-radius:50%;
+    background:var(--paper);
+    border:2px solid var(--forest);
+    margin-bottom:16px;
+    position:relative;
+    z-index:1;
+  }
+  .tline-dot.current{ background:var(--forest); }
+  .tline-year{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--brass);
+    margin-bottom:8px;
+  }
+  .tline-body h4{
+    font-family:var(--serif);
+    font-size:16.5px;
+    font-weight:600;
+    margin:0 0 6px;
+    line-height:1.25;
+  }
+  .tline-body p{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    line-height:1.5;
+    margin:0;
+  }
+
+  /* ---------- experience ---------- */
+
+  .entry{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:36px;
+    padding:36px 0;
+    border-top:1px solid var(--rule);
+  }
+  .entry:last-child{ border-bottom:1px solid var(--rule); }
+
+  .entry .when{
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--ink-soft);
+    padding-top:3px;
+  }
+  .entry .when .num{
+    display:inline-block;
+    color:var(--brass);
+    margin-right:8px;
+  }
+
+  .entry h3{
+    font-family:var(--serif);
+    font-size:23px;
+    font-weight:600;
+    margin:0 0 3px;
+  }
+  .entry .org{
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--forest);
+    margin-bottom:16px;
+  }
+  .entry ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  .entry li{
+    position:relative;
+    padding-left:20px;
+    margin-bottom:11px;
+    color:var(--ink-soft);
+    max-width:66ch;
+  }
+  .entry li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--rule);
+  }
+  .entry li strong{ color:var(--ink); font-weight:600; }
+
+  /* ---------- capabilities ---------- */
+
+  .cap-columns{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+  }
+  .cap-block h4{
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin:0 0 16px;
+    font-weight:500;
+  }
+  .cap-list{
+    border-top:1px solid var(--rule);
+  }
+  .cap-list .row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid var(--rule);
+    font-size:16.5px;
+  }
+  .cap-list .row .tag{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--brass);
+  }
+
+  /* ---------- credentials ---------- */
+
+  .cred-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+  }
+  .cred-block h3{
+    font-family:var(--serif);
+    font-size:21px;
+    font-weight:600;
+    margin:0 0 4px;
+  }
+  .cred-block .sub{
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+  }
+  .cred-block p{
+    color:var(--ink-soft);
+    font-size:15.5px;
+    max-width:50ch;
+    margin:0 0 14px;
+  }
+
+  .coupon-ladder{
+    display:flex;
+    gap:5px;
+    margin:22px 0 12px;
+    flex-wrap:wrap;
+  }
+  .coupon{
+    width:26px; height:34px;
+    border:1px solid var(--forest);
+    position:relative;
+  }
+  .coupon.filled{ background:var(--forest); }
+  .coupon.filled::after{
+    content:"";
+    position:absolute;
+    inset:4px;
+    border:1px dashed var(--paper);
+    opacity:.5;
+  }
+  .ladder-label{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  .ladder-label b{ color:var(--forest); }
+
+  .cgpa-bar{
+    height:6px;
+    background:var(--paper-3);
+    margin:20px 0 10px;
+    position:relative;
+  }
+  .cgpa-bar .fill{
+    position:absolute;
+    left:0; top:0; bottom:0;
+    background:var(--brass-soft);
+    width:75%;
+  }
+
+  /* ---------- beyond ---------- */
+
+  .beyond-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:2px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+  }
+  .beyond-card{
+    background:var(--paper);
+    padding:30px 26px;
+  }
+  .beyond-card .icon{
+    width:34px; height:34px;
+    margin-bottom:20px;
+  }
+  .beyond-card h4{
+    font-family:var(--serif);
+    font-size:19px;
+    font-weight:600;
+    margin:0 0 10px;
+  }
+  .beyond-card p{
+    color:var(--ink-soft);
+    font-size:15px;
+    line-height:1.65;
+    margin:0;
+  }
+
+  /* ---------- contact / footer ---------- */
+
+  footer{
+    padding:80px 0 50px;
+  }
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    gap:56px;
+    align-items:start;
+  }
+  footer h2{ margin-bottom:18px; }
+  footer .section-intro{ margin-bottom:34px; }
+
+  .contact-list{
+    font-family:var(--mono);
+    font-size:14px;
+  }
+  .contact-list .row{
+    display:flex;
+    justify-content:space-between;
+    padding:14px 0;
+    border-top:1px solid var(--rule);
+  }
+  .contact-list .row:last-child{ border-bottom:1px solid var(--rule); }
+  .contact-list a{ text-decoration:none; color:var(--ink); }
+  .contact-list a:hover{ color:var(--forest); }
+  .contact-list .row dt{ color:var(--ink-soft); }
+
+  .foot-meta{
+    display:flex;
+    justify-content:space-between;
+    margin-top:60px;
+    padding-top:22px;
+    border-top:1px solid var(--rule);
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- responsive ---------- */
+
+  @media (max-width: 860px){
+    .wrap{ padding:0 22px; }
+    nav.links{
+      position:absolute;
+      top:68px; left:0; right:0;
+      background:var(--paper);
+      border-bottom:1px solid var(--rule);
+      flex-direction:column;
+      gap:0;
+      padding:6px 22px 14px;
+      display:none;
+    }
+    nav.links.open{ display:flex; }
+    nav.links a{ padding:12px 0; border-bottom:1px solid var(--rule-soft); }
+    .nav-toggle{ display:block; }
+
+    .hero-grid, .about-grid, .cap-columns, .cred-grid, .contact-grid{
+      grid-template-columns:1fr;
+    }
+    .about-grid{ gap:36px; }
+    .beyond-grid{ grid-template-columns:1fr; }
+    .entry{ grid-template-columns:1fr; gap:8px; }
+    .fact-sheet{ margin-top:8px; }
+
+    .metrics-grid{ grid-template-columns:repeat(2, 1fr); }
+
+    .tline{ flex-direction:column; gap:26px; }
+    .tline-rail{ left:4px; top:0; bottom:0; right:auto; width:1px; height:auto; }
+    .tline-item{ padding-right:0; padding-left:26px; }
+    .tline-dot{ position:absolute; left:0; top:2px; margin-bottom:0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="#top" class="mark"><span class="dot"></span>Tanishq Gupta</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#record">Record</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#experience">Experience</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#beyond">Beyond</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top:76px;">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker">Gwalior, Madhya Pradesh — finance &amp; equity research</div>
+        <h1 class="name">Tanishq Gupta</h1>
+        <p class="hero-lede">
+          I'm a 22-year-old finance student who reads balance sheets the way other people read novels.
+          Right now that curiosity shows up as <em>equity valuation, financial modelling, and a slow,
+          steady climb through the ACCA syllabus.</em>
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:tanishq.publisher@gmail.com">Email me</a>
+          <a class="btn ghost" href="https://linkedin.com/in/tanishq-tanu-gupta-a9a555251/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-head">
+          <span>Model portfolio vs. benchmark</span>
+          <span class="val">+12.0%</span>
+        </div>
+        <svg viewBox="0 0 380 195" width="100%" height="auto">
+          <line x1="0" y1="30" x2="380" y2="30" stroke="var(--rule-soft)" stroke-width="1"/>
+          <line x1="0" y1="80" x2="380" y2="80" stroke="var(--rule-soft)" stroke-width="1"/>
+          <line x1="0" y1="130" x2="380" y2="130" stroke="var(--rule-soft)" stroke-width="1"/>
+          <text x="378" y="27" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="8.5" fill="var(--ink-soft)">index 130</text>
+          <text x="378" y="127" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="8.5" fill="var(--ink-soft)">index 100</text>
+          <path id="path-benchmark" d="M0,120 C60,116 110,108 160,100 C220,91 280,84 380,72"
+                fill="none" stroke="var(--brass-soft)" stroke-width="2" stroke-dasharray="5 4"/>
+          <path id="path-portfolio" d="M0,120 C60,110 110,95 160,78 C220,58 280,40 380,18"
+                fill="none" stroke="var(--forest)" stroke-width="2.5"/>
+          <g id="callout">
+            <circle cx="380" cy="18" r="3.5" fill="var(--forest)"/>
+            <circle cx="380" cy="72" r="3.5" fill="var(--brass-soft)"/>
+          </g>
+          <g font-family="IBM Plex Mono, monospace" font-size="8.5" fill="var(--ink-soft)">
+            <text x="0" y="150">May</text>
+            <text x="82" y="150">Jun</text>
+            <text x="160" y="150">Aug</text>
+            <text x="240" y="150">Oct</text>
+            <text x="360" y="150">Dec</text>
+          </g>
+          <line x1="0" y1="140" x2="380" y2="140" stroke="var(--rule)" stroke-width="1"/>
+        </svg>
+        <div class="chart-legend">
+          <span><i class="swatch p"></i>Portfolio (15+ equities, DCF &amp; comps)</span>
+          <span><i class="swatch b"></i>Benchmark index</span>
+        </div>
+        <div class="chart-note">Financial Analyst Intern, BKG Securities Pvt. Ltd. — May–Dec 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECORD / BY THE NUMBERS -->
+  <section id="record">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx"></span>
+        <h2>The record, in figures</h2>
+      </div>
+      <p class="section-intro">Every figure below traces back to a specific role — nothing rounded up for effect.</p>
+      <div class="metrics-grid">
+        <div class="metric" data-target="12" data-suffix="%">
+          <div class="metric-val"><span class="num">0</span><span class="suf">%</span></div>
+          <div class="metric-label">Portfolio outperformance vs. benchmark index</div>
+        </div>
+        <div class="metric" data-target="15" data-suffix="+">
+          <div class="metric-val"><span class="num">0</span><span class="suf">+</span></div>
+          <div class="metric-label">Equity assets analysed with DCF &amp; comps</div>
+        </div>
+        <div class="metric" data-target="20" data-suffix="%">
+          <div class="metric-val"><span class="num">0</span><span class="suf">%</span></div>
+          <div class="metric-label">Lift in strategic-planning accuracy</div>
+        </div>
+        <div class="metric" data-target="15" data-suffix="%">
+          <div class="metric-val"><span class="num">0</span><span class="suf">%</span></div>
+          <div class="metric-label">Faster turnaround on comparison reports</div>
+        </div>
+        <div class="metric" data-target="40" data-suffix="%">
+          <div class="metric-val"><span class="num">0</span><span class="suf">%</span></div>
+          <div class="metric-label">Growth in reader engagement at Clarity</div>
+        </div>
+        <div class="metric" data-target="1000" data-suffix="+">
+          <div class="metric-val"><span class="num">0</span><span class="suf">+</span></div>
+          <div class="metric-label">Readers reached every month</div>
+        </div>
+        <div class="metric" data-target="440" data-suffix="+">
+          <div class="metric-val"><span class="num">0</span><span class="suf">+</span></div>
+          <div class="metric-label">Participants coordinated at Smart India Hackathon</div>
+        </div>
+        <div class="metric" data-target="40" data-suffix="">
+          <div class="metric-val"><span class="num">0</span><span class="suf"></span></div>
+          <div class="metric-label">NCC cadets led through drills &amp; camps</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="section-head">
+          <span class="idx"></span>
+          <h2>About</h2>
+        </div>
+        <p>
+          Money has always been the thing Tanishq wants to understand properly — not just how to make it,
+          but how it moves, gets priced, gets misread, and gets modelled. That pull toward economics is
+          what took him from a Bachelor of Commerce at Suresh Gyan Vihar University into equity research,
+          and it's what keeps him working through the ACCA syllabus one paper at a time.
+        </p>
+        <p class="pull">
+          "I'm interested in the discipline of getting a number right — and being honest about
+          the assumptions that got you there."
+        </p>
+        <p>
+          Before finance took over, he spent a year writing — translating dense mental-health research
+          into articles people actually wanted to read. That habit of turning complexity into something
+          clear is still the throughline: whether it's a DCF model or a research note, the job is to make
+          the numbers make sense to someone else.
+        </p>
+      </div>
+      <div class="fact-sheet">
+        <dl>
+          <div class="fact-row"><dt>Based in</dt><dd>Gwalior, MP, India</dd></div>
+          <div class="fact-row"><dt>Focus</dt><dd>Equity research &amp; valuation</dd></div>
+          <div class="fact-row"><dt>Studying</dt><dd>ACCA, Knowledge Level</dd></div>
+          <div class="fact-row"><dt>Education</dt><dd>B.Com, 2021–2024</dd></div>
+          <div class="fact-row"><dt>Tools</dt><dd>Excel, TradingView</dd></div>
+          <div class="fact-row"><dt>Reachable via</dt><dd>Email, LinkedIn</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx"></span>
+        <h2>Timeline</h2>
+      </div>
+      <p class="section-intro">Five years, laid out like a statement of account.</p>
+      <div class="tline">
+        <div class="tline-rail"></div>
+        <div class="tline-item">
+          <div class="tline-dot"></div>
+          <div class="tline-year">2021</div>
+          <div class="tline-body">
+            <h4>Begins B.Com</h4>
+            <p>Enrols at Suresh Gyan Vihar University, Jaipur.</p>
+          </div>
+        </div>
+        <div class="tline-item">
+          <div class="tline-dot"></div>
+          <div class="tline-year">Mar 2024</div>
+          <div class="tline-body">
+            <h4>Joins Clarity</h4>
+            <p>Starts as researcher &amp; writer, translating mental-health research into public-facing articles.</p>
+          </div>
+        </div>
+        <div class="tline-item">
+          <div class="tline-dot"></div>
+          <div class="tline-year">2024</div>
+          <div class="tline-body">
+            <h4>Graduates B.Com</h4>
+            <p>Completes the degree with a 7.5 CGPA; begins the ACCA Knowledge Level syllabus.</p>
+          </div>
+        </div>
+        <div class="tline-item">
+          <div class="tline-dot"></div>
+          <div class="tline-year">May 2025</div>
+          <div class="tline-body">
+            <h4>Starts at BKG Securities</h4>
+            <p>Takes on equity valuation and portfolio analysis as a Financial Analyst Intern.</p>
+          </div>
+        </div>
+        <div class="tline-item">
+          <div class="tline-dot"></div>
+          <div class="tline-year">Dec 2025</div>
+          <div class="tline-body">
+            <h4>Wraps the BKG internship</h4>
+            <p>Closes out the engagement with the portfolio 12% ahead of benchmark.</p>
+          </div>
+        </div>
+        <div class="tline-item">
+          <div class="tline-dot current"></div>
+          <div class="tline-year">Now</div>
+          <div class="tline-body">
+            <h4>5 of 13 ACCA papers cleared</h4>
+            <p>Still working through the syllabus, one professional exam at a time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx"></span>
+        <h2>Experience</h2>
+      </div>
+
+      <div class="entry">
+        <div class="when"><span class="num">01</span>May – Dec 2025</div>
+        <div>
+          <h3>Financial Analyst Intern</h3>
+          <div class="org">BKG Securities Pvt. Ltd. — Remote</div>
+          <ul>
+            <li>Ran fundamental analysis and valuation on a <strong>15+ stock portfolio</strong>, combining DCF and comparable-company analysis to inform investment calls — the portfolio <strong>outperformed its benchmark index by 12%</strong>.</li>
+            <li>Carried out market and investment research and turned it into synthesis management could actually act on, sharpening strategic planning accuracy by roughly <strong>20%</strong>.</li>
+            <li>Built detailed comparison reports across financial products, cutting senior leadership's analysis turnaround time by <strong>15%</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="when"><span class="num">02</span>Mar 2024 – Mar 2025</div>
+        <div>
+          <h3>Researcher &amp; Writer</h3>
+          <div class="org">Clarity — Remote</div>
+          <ul>
+            <li>Researched and wrote <strong>15 in-depth articles</strong> on mental health, translating dense studies into something readable without losing accuracy — engagement rose <strong>40%</strong>.</li>
+            <li>Worked with a remote editorial team to reach <strong>1,000+ readers a month</strong>, aiming squarely at raising awareness and everyday wellbeing.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section id="capabilities">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx"></span>
+        <h2>Capabilities</h2>
+      </div>
+      <div class="cap-columns">
+        <div class="cap-block">
+          <h4>Analysis &amp; modelling</h4>
+          <div class="cap-list">
+            <div class="row"><span>Financial modelling</span><span class="tag">core</span></div>
+            <div class="row"><span>Quantitative analysis</span><span class="tag">core</span></div>
+            <div class="row"><span>Capital planning</span><span class="tag">core</span></div>
+            <div class="row"><span>Budgeting</span><span class="tag">core</span></div>
+            <div class="row"><span>Risk assessment</span><span class="tag">core</span></div>
+            <div class="row"><span>Forecasting</span><span class="tag">core</span></div>
+          </div>
+        </div>
+        <div class="cap-block">
+          <h4>Tools &amp; software</h4>
+          <div class="cap-list">
+            <div class="row"><span>TradingView</span><span class="tag">charts</span></div>
+            <div class="row"><span>Excel — VLOOKUP &amp; Index-Match</span><span class="tag">excel</span></div>
+            <div class="row"><span>Excel — Pivot Tables</span><span class="tag">excel</span></div>
+            <div class="row"><span>Excel — Macros</span><span class="tag">excel</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section id="credentials">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx"></span>
+        <h2>Credentials</h2>
+      </div>
+      <div class="cred-grid">
+        <div class="cred-block">
+          <h3>ACCA</h3>
+          <div class="sub">Knowledge Level — in progress</div>
+          <p>Actively working through the ACCA syllabus to build a rigorous, internationally recognised
+             foundation in financial reporting, management accounting, and business operations.</p>
+          <div class="coupon-ladder" aria-hidden="true">
+            <div class="coupon filled"></div><div class="coupon filled"></div><div class="coupon filled"></div>
+            <div class="coupon filled"></div><div class="coupon filled"></div>
+            <div class="coupon"></div><div class="coupon"></div><div class="coupon"></div>
+            <div class="coupon"></div><div class="coupon"></div><div class="coupon"></div>
+            <div class="coupon"></div><div class="coupon"></div>
+          </div>
+          <div class="ladder-label"><b>5 of 13</b> professional examinations cleared</div>
+
+          <div style="margin-top:34px;">
+            <h3>Financial Accounting and Analysis</h3>
+            <div class="sub">IIM Bangalore</div>
+            <p>A deep course spanning accounting fundamentals, financial statements and reporting,
+               valuation techniques, investment analysis, risk assessment, decision-making and ethical standards.</p>
+          </div>
+        </div>
+
+        <div class="cred-block">
+          <h3>Bachelor of Commerce</h3>
+          <div class="sub">Suresh Gyan Vihar University, Jaipur — 2021–2024</div>
+          <p>Undergraduate degree in commerce, the starting point for a path that has since narrowed
+             toward equity research and financial analysis.</p>
+          <div class="cgpa-bar"><div class="fill"></div></div>
+          <div class="ladder-label">CGPA <b>7.5</b> / 10</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEYOND -->
+  <section id="beyond">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx"></span>
+        <h2>Beyond the ledger</h2>
+      </div>
+      <p class="section-intro">The parts of the record that don't show up in a financial model.</p>
+      <div class="beyond-grid">
+        <div class="beyond-card">
+          <svg class="icon" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15" stroke="var(--forest)" stroke-width="1.5"/><path d="M17 8v9l6 4" stroke="var(--forest)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <h4>Taekwondo</h4>
+          <p>Gold medallist at the SGFI State Championships and silver medallist at the Federation Games —
+             discipline he now brings to poring over financial statements.</p>
+        </div>
+        <div class="beyond-card">
+          <svg class="icon" viewBox="0 0 34 34" fill="none"><rect x="4" y="6" width="26" height="20" rx="1" stroke="var(--forest)" stroke-width="1.5"/><path d="M4 12h26" stroke="var(--forest)" stroke-width="1.5"/></svg>
+          <h4>Smart India Hackathon, MITS-DU</h4>
+          <p>Led a 22-member team organising logistics and promotion for 440+ participants, 20+ mentors
+             and 75+ teams — and brought the institute's costs down by 15% in the process.</p>
+        </div>
+        <div class="beyond-card">
+          <svg class="icon" viewBox="0 0 34 34" fill="none"><path d="M17 4l4 8 9 1-6.5 6 1.5 9-8-4.5-8 4.5 1.5-9L4 13l9-1 4-8z" stroke="var(--forest)" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <h4>NCC 'B' Certificate</h4>
+          <p>Led a platoon of 40 cadets through drills, community service and national-level camps —
+             an early lesson in operating under structure and accountability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Let's talk numbers</h2>
+        <p class="section-intro">
+          Open to internships, research roles, and conversations about markets, valuation, or
+          anything with a spreadsheet attached.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:tanishq.publisher@gmail.com">Email me</a>
+          <a class="btn ghost" href="https://linkedin.com/in/tanishq-tanu-gupta-a9a555251/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="contact-list">
+        <div class="row"><dt>Email</dt><a href="mailto:tanishq.publisher@gmail.com">tanishq.publisher@gmail.com</a></div>
+        <div class="row"><dt>Phone</dt><a href="tel:+919425335897">+91 94253 35897</a></div>
+        <div class="row"><dt>LinkedIn</dt><a href="https://linkedin.com/in/tanishq-tanu-gupta-a9a555251/" target="_blank" rel="noopener">tanishq-tanu-gupta</a></div>
+        <div class="row"><dt>Location</dt><span>Gwalior, MP, India</span></div>
+      </div>
+    </div>
+    <div class="wrap foot-meta">
+      <span>Tanishq Gupta</span>
+      <span>Updated 2026</span>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const metrics = document.querySelectorAll('.metric');
+
+  function formatNum(n){
+    return n >= 1000 ? n.toLocaleString('en-IN') : String(n);
+  }
+
+  function countUp(el){
+    const target = parseInt(el.dataset.target, 10);
+    const numEl = el.querySelector('.num');
+    if(reduceMotion){ numEl.textContent = formatNum(target); return; }
+    const duration = 1100;
+    const start = performance.now();
+    function tick(now){
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      numEl.textContent = formatNum(Math.round(target * eased));
+      if(p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        countUp(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  metrics.forEach(m => observer.observe(m));
+</script>
+
+</body>
+</html>
