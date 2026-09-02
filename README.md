@@ -1,8 +1,8 @@
 # Tanishq Gupta — Finance & Equity Research Portfolio
 
-[![Live Website](https://img.shields.io/badge/Live%20Website-Vercel-00E599?style=for-the-badge&logo=vercel&logoColor=white)](https://tanishq-gupta.vercel.app)
-[![ACCA Progress](https://img.shields.io/badge/ACCA%20Exam%20Progress-5%2F13%20Cleared-1F4436?style=for-the-badge)](https://tanishq-gupta.vercel.app#credentials)
-[![Certification](https://img.shields.io/badge/IIM%20Bangalore-Financial%20Accounting-B59445?style=for-the-badge)](https://tanishq-gupta.vercel.app#credentials)
+[![Live Website](https://img.shields.io/badge/Live%20Website-Vercel-00E599?style=for-the-badge&logo=vercel&logoColor=white)](https://tanishq-portfolio-iota.vercel.app/)
+[![ACCA Progress](https://img.shields.io/badge/ACCA%20Exam%20Progress-5%2F13%20Cleared-1F4436?style=for-the-badge)](https://tanishq-portfolio-iota.vercel.app/#credentials)
+[![Certification](https://img.shields.io/badge/IIM%20Bangalore-Financial%20Accounting-B59445?style=for-the-badge)](https://tanishq-portfolio-iota.vercel.app/#credentials)
 
 Interactive personal portfolio website for **Tanishq Gupta**, specializing in **Equity Valuation, Discounted Cash Flow (DCF) Modeling, and Fundamental Financial Analysis**.
 
